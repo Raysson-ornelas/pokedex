@@ -13,7 +13,7 @@ function Layout(props: Props) {
     <>
       <NavBar />
       <Container>
-        <div className="grid gap-12 py-12">{children}</div>
+        <div>{children}</div>
       </Container>
     </>
   );
