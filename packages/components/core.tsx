@@ -5,8 +5,7 @@ type ContainerProps = DetailedHTMLProps<
   HTMLDivElement
 >;
 
-const containerStyle =
-  "container max-w-full px-4 items-center grid justify-center";
+const containerStyle = "container max-w-full px-4";
 export const Container: FC<ContainerProps> = (props) => (
   <div {...props} className={containerStyle} />
 );
