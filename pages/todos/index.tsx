@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import Link from "next/link";
 
 interface data {
   id: number;
@@ -17,6 +18,7 @@ export async function getStaticProps<GetStaticProps>() {
     props: { todos },
   };
 }
+
 export default function Todos({ todos }: Props) {
   return (
     <>
@@ -25,7 +27,7 @@ export default function Todos({ todos }: Props) {
         <ul className="list-none">
           {todos.map((todo) => (
             <li className="border-b border-gray-600 p-1" key={todo.id}>
-              {todo.title}
+              <Link href={`/todos/${todo.id}`}>{todo.title}</Link>
             </li>
           ))}
         </ul>
