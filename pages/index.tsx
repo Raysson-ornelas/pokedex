@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
+import { useSession } from "next-auth/react";
 import Head from "next/head";
 
 const Home: NextPage = () => {
+  const { data: session } = useSession();
   return (
     <div>
       <Head>
@@ -9,8 +11,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="grid min-h-[70vh] content-center text-center">
-        <h1 className="py-3 text-3xl font-bold">Teste1</h1>
-        <h2>Teste</h2>
+        {session ? (
+          <h1 className="text-xl font-bold text-gray-500">
+            Bem vindo {session.user?.name}
+          </h1>
+        ) : null}
       </div>
     </div>
   );
