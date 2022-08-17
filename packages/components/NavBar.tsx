@@ -20,7 +20,7 @@ function NavBar() {
             {session ? (
               <>
                 <img
-                  src={session.user?.image as string}
+                  src={session.user?.image ?? ''}
                   className="object-cover rounded-full h-8 w-8"
                 />
                 <button onClick={() => signOut()}>Sair</button>
