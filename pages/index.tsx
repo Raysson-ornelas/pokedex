@@ -15,7 +15,11 @@ const Home: NextPage = () => {
           <h1 className="text-xl font-bold text-gray-500">
             Bem vindo {session.user?.name}
           </h1>
-        ) : null}
+        ) : (
+          <h1 className="text-xl font-bold text-gray-200">
+            Realize o login para continuar
+          </h1>
+        )}
       </div>
     </div>
   );

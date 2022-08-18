@@ -21,17 +21,17 @@ export async function getStaticProps<GetStaticProps>() {
 
 export default function Todos({ todos }: Props) {
   return (
-    <>
-      <h1 className="text-center text-lg m-2">Tarefas para fazer</h1>
-      <div className="w-96 text-center">
-        <ul className="list-none">
-          {todos.map((todo) => (
-            <li className="border-b border-gray-600 p-1" key={todo.id}>
-              <Link href={`/todos/${todo.id}`}>{todo.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+    <div className="flex-col justify-center items-centers text-center">
+      <h1 className="text-xl text-gray-300 m-4">Tarefas para fazer</h1>
+      <ul className="list-none">
+        {todos.map((todo) => (
+          <li className="p-1" key={todo.id}>
+            <a href={`/todos/${todo.id}`} className="underline ">
+              {todo.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

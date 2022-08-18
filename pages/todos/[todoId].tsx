@@ -41,9 +41,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function Todo({ todo }: Props) {
   return (
-    <>
+    <div className="grid justify-center place-items-center">
       <h1>Exibindo o todo: {todo.id}</h1>
       <h3>{todo.title}</h3>
-    </>
+    </div>
   );
 }

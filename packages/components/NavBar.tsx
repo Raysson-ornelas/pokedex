@@ -6,7 +6,7 @@ import { Container } from "./core";
 function NavBar() {
   const { data: session } = useSession();
   return (
-    <nav className="z-1 sticky top-0 bg-slate-800 max-w-full border-b border-green-600 shadow-xl p-6">
+    <nav className="z-1 sticky top-0 bg-slate-800 max-w-full border-b border-orange-600 shadow-xl p-6">
       <Container>
         <div className="flex justify-between">
           <div className="flex items-center gap-4">
@@ -20,7 +20,7 @@ function NavBar() {
             {session ? (
               <>
                 <img
-                  src={session.user?.image ?? ''}
+                  src={session.user?.image ?? ""}
                   className="object-cover rounded-full h-8 w-8"
                 />
                 <button onClick={() => signOut()}>Sair</button>
