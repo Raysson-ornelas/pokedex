@@ -6,7 +6,10 @@ function About() {
       <Head>
         <title>Sobre nós</title>
       </Head>
-      <h1>Página de About</h1>
+
+      <div className="items-center justify-center flex">
+        <img src="playing-games.svg" alt="" className="h-1/2 w-1/2" />
+      </div>
     </>
   );
 }

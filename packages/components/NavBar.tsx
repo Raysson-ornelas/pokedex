@@ -2,19 +2,24 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./core";
+import Logo from "./Logo";
 
 function NavBar() {
   const { data: session } = useSession();
   return (
-    <nav className="z-1 sticky top-0 bg-slate-800 max-w-full border-b border-orange-600 shadow-xl p-6">
+    <nav className="z-1 sticky top-0 bg-slate-800 border-b border-orange-600 shadow-xl p-6">
       <Container>
         <div className="flex justify-between">
+          <div className="flex gap-4 items-center">
+            <Logo />
+            <Link href="/">Pokedex</Link>
+          </div>
           <div className="flex items-center gap-4">
             <Link href="/" className="">
               Home
             </Link>
+            <Link href="/pokedex">Pokedex</Link>
             <Link href="/about">About</Link>
-            <Link href="/todos">To do</Link>
           </div>
           <div className="flex gap-2">
             {session ? (

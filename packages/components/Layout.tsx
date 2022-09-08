@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Container } from "./core";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 interface Props {
@@ -12,9 +13,8 @@ function Layout(props: Props) {
   return (
     <>
       <NavBar />
-      <Container>
-        <div>{children}</div>
-      </Container>
+      <Container>{children}</Container>
+      <Footer />
     </>
   );
 }
